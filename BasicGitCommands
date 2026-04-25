@@ -1,1 +1,42 @@
+To configure Git - 
+
+git config --global user.name NavinHajari
+git config --global user.email emailid@yahoo.co.in
+
+To start version control of a directory(or to create a local Git repo), initiate it into Git using the command :
+git init (creates a local git repo)
+(a hidden file .git/ is created in the directory, use "ls -a" to print the same)
+
+git status (to check status of the directory)
+git add file_name (moves the file to the staging area)
+git rm --cached file_name (to untrack the file)
+git commit -m "added file_name" (to commit changes made to the file)
+git rm file_name (the file is deleted from the local repo)
+git restore file_name (file is restored from remote rep to the local)
+git add . (moves all file at once to the staging area)
+git log (tracks changes/ who made what changes & when)
+git log --online (all logs in one line, where the HEAD points to the latest commit)
+git branch (shows different branches)
+git checkout -b dev (creates a* switches to a new branch "dev")
+git checkout master/git switch dev (switches to the branch of our choice)
+git merge dev (merges one branch into another, first switch to the main branch & run the merge command)
+git remote -v (checks if the local repo is connected to any remote repo)
+git remote add origin https://github.com/NavinHajari/file_name (to establish connection with a remote repo, where "origin" is a variable to hold the github link)
+git remote set-url origin personal-token-collected-from-github@https://github.com/NavinHajari/file_name
+git push origin master (to push changes to the remote repo after establishing connection with it)
+git pull origin master (to pull changes from the remote repo to the local)
+git diff (shows difference)
+git fetch (fetches all the branches)
+
+Accessing a repo on Github using SSH:
+1. Generate a key pair
+ ssh-keygen
+2. Get the public key & paste it on Github
+3. Go to the global settings --> SSH & GPG keys --> Click "Add new ssh key" & paste the key & click add
+4. Now get the ssh link of the repo to copy from the Github
+5. Git clone git@github.com/NavinHajari/90DaysDevOps
+
+.gitignore:
+1. Create a .gitignore file to keep away files not supposed to be tracked on git
+eg. vim .gitignore --> password.txt
 
